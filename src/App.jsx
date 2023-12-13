@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import GlobalStyles from "./styles/GlobalStyles";
 
 const H1 = styled.h1`
   font-size: 30px;
@@ -22,17 +23,20 @@ const Input = styled.input`
   padding: 0.8rem 1.2rem;
 `;
 
-const StyledApp = styled.div`
+const StyledApp = styled.main`
   background-color: orange;
   padding: 20px;
 `;
 
 export default function App() {
   return (
-    <StyledApp>
-      <H1>THE WILD OASIS</H1>
-      <Button>djkls</Button>
-      <Input type="number" placeholder="Number"></Input>
-    </StyledApp>
+    <>
+      <GlobalStyles />
+      <StyledApp>
+        <H1>THE WILD OASIS</H1>
+        <Button>djkls</Button>
+        <Input type="number" placeholder="Number"></Input>
+      </StyledApp>
+    </>
   );
 }
